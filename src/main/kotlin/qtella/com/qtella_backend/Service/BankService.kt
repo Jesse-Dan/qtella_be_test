@@ -13,6 +13,7 @@ class BankService(val dataSource: BanksDataSource){
         val response: MutableList<Banks>  = dataSource.deleteBanks(bankDataSource = getBanks().toList())
             return if (response.isNotEmpty())
                 DeleteResponse(responseMessage = "Error Deleting Banks [LIST IS MESSED UP]", response = response)
+
             else DeleteResponse(responseMessage = "Banks Successfully Deleted", response = response)
 
     }
