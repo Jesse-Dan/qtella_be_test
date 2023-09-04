@@ -18,6 +18,10 @@ class BankService(val dataSource: BanksDataSource){
 
     }
 
+    fun getBanksById(accountNumber: String): Banks = dataSource.getBanksById(accountNumber)
+
+
+
 }
 
 data class DeleteResponse(
