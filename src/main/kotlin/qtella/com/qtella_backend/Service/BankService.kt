@@ -19,7 +19,7 @@ class BankService(val dataSource: BanksDataSource){
     }
 
     fun getBanksById(accountNumber: String): Banks = dataSource.getBanksById(accountNumber)
-
+    fun addBank(bank: Banks): Banks = dataSource.addNewBank(bank)
 
 
 }

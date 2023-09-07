@@ -9,5 +9,6 @@ interface BanksDataSource {
     fun deleteBanks(bankDataSource: Collection<Banks>) : MutableList<Banks>
 
     fun getBanksById(accountNumber: String) : Banks
+    abstract fun addNewBank(bank: Banks): Banks
 
 }
