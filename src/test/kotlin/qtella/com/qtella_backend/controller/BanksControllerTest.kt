@@ -31,8 +31,6 @@ internal class BanksControllerTest{
 
         //  then
 
-    }
-
     @Test
     fun  runTest2() {
         //given
@@ -44,15 +42,15 @@ internal class BanksControllerTest{
             .andExpect {
                 content { contentType(MediaType.APPLICATION_JSON) }
                 status { isOk() }
-                jsonPath("$.accountNumber"){value("2.5")}
+                jsonPath("$.accountNumber") { value("2.5") }
 //                jsonPath("$.transactionFee"){value("21")}
 
             }
 
 
-
         //  then
 
+        }
     }
 
 }

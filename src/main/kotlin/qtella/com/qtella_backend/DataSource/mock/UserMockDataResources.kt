@@ -41,7 +41,6 @@ class UserMockDataResources:UserInterface {
         TODO("Not yet implemented")
     }
 
-
     override fun login(loginPayload: LoginPayload): User {
        val user : User? =  getSingleUser(loginPayload = loginPayload)
         return if(user?.password != loginPayload.password){
@@ -51,9 +50,7 @@ class UserMockDataResources:UserInterface {
         }
 
     }
-
-
-
+    
     fun getSingleUser(loginPayload:LoginPayload) : User? =  users.firstOrNull(){ it.email == loginPayload.email} ?:
     throw UserDoesNotExistException(message ="User ${loginPayload.email} does not Exist" , cause = Throwable(message = loginPayload.toString()) )
 
