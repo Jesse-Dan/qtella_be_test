@@ -7,5 +7,6 @@ import org.springframework.boot.runApplication
 class QtellaBackendApplication
 
 fun main(args: Array<String>) {
+
 	runApplication<QtellaBackendApplication>(*args)
 }
